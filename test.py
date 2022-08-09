@@ -4,8 +4,6 @@ import time
 import pandas as pd
 import datetime
 import random
-import xlrd
-from openpyxl import load_workbook
 
 os.chdir(r"D:\Python programming vscode\Desktop_Notification")
 
