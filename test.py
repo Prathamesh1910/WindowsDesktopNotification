@@ -60,8 +60,7 @@ if __name__ == '__main__':
 
         osCommandString = "notepad.exe explanation.txt"
         toast.set_audio(audio.Reminder, loop=False)
-
-        #toast.add_actions(label="Click here for explanation", launch=webbrowser.open('explanation.html'))
+        
 
         toast.show()
         os.system(osCommandString)
