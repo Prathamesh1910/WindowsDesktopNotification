@@ -25,11 +25,9 @@ if __name__ == '__main__':
         if today > item['Today']:
 
             ## * Updating the date to today's date
-            change_date = df.loc[j, 'Today']
             df.loc[j, 'Today'] = today
 
             ## * updating the repetitions to 0 as it is a new day, new beginning *
-            rpt = df.loc[j, 'Repetition']
             df.loc[j, 'Repetition'] = 0
     
     ran = False # To check if the program ran or not
@@ -48,8 +46,7 @@ if __name__ == '__main__':
     ## * to increase the repetition by 1 once the word is displayed *
     def incrementRpt():
         for i in writeInd:
-            rpt = df.loc[i, 'Repetition']
-            df.loc[i, 'Repetition'] = rpt + 1
+            df.loc[i, 'Repetition']+=1
         df.to_excel('german_words_data.xlsx', index = False)
 
     ## * Open notepad function *
@@ -95,8 +92,7 @@ if __name__ == '__main__':
     ## * If all the words are repeated twice and the program is not executed, change all the repetitions back to 0 to start the execution of program *
     ## * However no word will be displayed this time. Only the repetitions will be changed back to 0 and we will start getting notifications afterwards *
     if ran == False:
-        for k, item in iteration:
-            rpt = df.loc[k, 'Repetition']
+        for k, item in iteration:            
             df.loc[k, 'Repetition'] = 0
         df.to_excel('german_words_data.xlsx', index = False)
 
