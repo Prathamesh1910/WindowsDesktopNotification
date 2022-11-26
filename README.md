@@ -10,7 +10,5 @@ In order to run the program, you need to have following Python modules:
 4) pandas
 5) datetime
 6) random
-7) xlrd
-8) openpyxl (load_workbook)
 
 No need to provide any path in "os.chdir()". It is needed only while running the program using Task Scheduler.
